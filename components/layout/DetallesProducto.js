@@ -33,7 +33,7 @@ const DetallesProducto = ({dato/* catalog_product_id,thumbnail,title,price */}) 
 
    // console.log('detalle producto: ',thumbnail);
     
-    const {thumbnail,title,price,id}=dato;
+    const {thumbnail,title,price,id,currency_id}=dato;
    
     return (  
         <>
@@ -42,7 +42,7 @@ const DetallesProducto = ({dato/* catalog_product_id,thumbnail,title,price */}) 
                     <Imagen src={thumbnail} />
                 </div>
                 <div>
-                    <p>$ <b>{price}</b> </p>
+                    <p>{currency_id} <b>{price}</b> </p>
                     <Link href="/productos/[id]" as={`/productos/${id}`}>
                         <Titulo> {title} </Titulo>
                     </Link>
